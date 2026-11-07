@@ -1,0 +1,7 @@
+baking.branden.cafe {
+  reverse_proxy baking
+}
+
+glance.branden.cafe {
+  reverse_proxy glance
+}

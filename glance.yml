@@ -7,25 +7,73 @@ branding:
 
 pages:
   - name: Home
+
+    head-widgets:
+      - type: search
+        search-engine: kagi
+
     columns:
       - size: small
         widgets:
           - type: clock
-            hour-format: 24h
-
-          - type: bookmarks
-            groups:
-              - title: Cafè
-                links:
-                  - title: Baking
-                    url: https://baking.branden.cafe
-                  - title: Glance
-                    url: https://glance.branden.cafe
+            hour-format: 12h
+            timezones:
+              - timezone: America/New_York
+                label: New York
+              - timezone: Asia/Tokyo
+                label: Tokyo
+          - type: monitor
+            title: The Cafè
+            sites:
+              - title: Baker's Percentages
+                url: https://baking.branden.cafe
+                check-url: https://baking.branden.cafe/api/healthcheck
 
       - size: full
+        style: vertical-list
         widgets:
           - type: rss
             title: News
             feeds:
-              - url: https://news.ycombinator.com/rss
-                title: Hacker News
+              - url: https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
+                title: New York Times
+                limit: 10
+              - url: https://www.wired.com/feed/rss/
+                title: Wired
+                limit: 10
+      - size: full
+        style: vertical-list
+        widgets:
+          - type: rss
+            title: Small Web
+            feeds:
+              - url: https://kagi.com/api/v1/smallweb/feed/
+                title: Small Web
+                limit: 10
+              - url: https://lynx.fail/rss.xml
+                title: Lynx
+              - url: https://bexfiles.ghost.io/rss/
+                title: The BeX Files
+              - url: https://www.wheresyoured.at/rss/
+                title: Where's Your Ed At
+              - url: https://remapradio.com/rss/
+                title: Remap Radio
+              - url: https://nudgepinball.substack.com/feed/
+                title: Nudge
+              - url: https://www.404media.co/rss/
+                title: 404 Media
+              - url: https://aftermath.site/rss/
+                title: Aftermath
+          - type: bookmarks
+            groups:
+              - links:
+                  - title: Kagi Small Web
+                    url: https://kagi.com/smallweb/
+
+theme:
+  light: true
+  background-color: 28 40 77
+  primary-color: 155 100 20
+  negative-color: 0 100 60
+  contrast-multiplier: 1.1
+  text-saturation-multiplier: 0.5

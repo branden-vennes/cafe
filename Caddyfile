@@ -1,7 +1,7 @@
 baking.branden.cafe {
-  reverse_proxy baking:3000
+	reverse_proxy baking:3000
 }
 
 glance.branden.cafe {
-  reverse_proxy glance:4000
+	reverse_proxy glance:4000
 }

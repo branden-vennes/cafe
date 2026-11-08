@@ -1,0 +1,31 @@
+server:
+  host: 0.0.0.0
+  port: 4000
+
+branding:
+  app-name: "Cafè"
+
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 24h
+
+          - type: bookmarks
+            groups:
+              - title: Cafè
+                links:
+                  - title: Baking
+                    url: https://baking.branden.cafe
+                  - title: Glance
+                    url: https://glance.branden.cafe
+
+      - size: full
+        widgets:
+          - type: rss
+            title: News
+            feeds:
+              - url: https://news.ycombinator.com/rss
+                title: Hacker News
